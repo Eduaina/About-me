@@ -1,57 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A personal portfolio website for a web developer" />
-    <meta content="Eduaina Portfolio" property="og:title" />
-    <meta property="og:type" content="website">
-    <meta content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
-          property="og:image" />
-    <meta property="og:url" content="https://www.freecodecamp.org" />
-
-    <!-- title -->
-    <title>Personal Portfolio Website</title>
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
-          rel="stylesheet">
-    
-    <!-- css -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee's Portfolio</title>
+  <link rel="stylesheet" href="/Task-1-Personal-Portfolio-Website/css/global.css">
+  <link rel="stylesheet" href="/Task-1-Personal-Portfolio-Website/css/main.css">
 </head>
 <body>
-    
-    <section class="section intro">
-        <main class="main" id="main"></main>
-    </section>
+    <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Bee</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#quality">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle">&#9776;</button>
+    </div>
+  </header>
 
+  <!-- THEME TOGGLER -->
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
 
-    <section class="section about"></section>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="animated-text">Hi, I'm Bee</h1>
+      <p class="role">Full-Stack Frontend Developer</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="#projects" class="btn btn-outline">My Work</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
 
-    <section class="section quality"></section>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-img">
+        <img src="https://via.placeholder.com/300" alt="Profile Image">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm a passionate front-end developer focused on creating visually stunning and interactive web experiences.</p>
+        <div class="counters">
+          <div class="counter">
+            <span class="count" data-target="5">0</span> Years Experience
+          </div>
+          <div class="counter">
+            <span class="count" data-target="20">0</span> Projects Completed
+          </div>
+          <div class="counter">
+            <span class="count" data-target="10">0</span> Happy Clients
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section skill"></section>
+  <!-- QUALITY SECTION -->
+  <section id="quality" class="quality section">
+    <div class="container">
+      <h2>My Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>2020 - 2021</h3>
+          <p>Front-End Development Internship</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2021 - 2023</h3>
+          <p>Freelance Projects & Frontend Work</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2023 - Present</h3>
+          <p>Full-Stack Developer & Tech Content Creator</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section service"></section>
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <div class="skill">
+          <h4>HTML</h4>
+          <div class="skill-bar" data-skill="90%"></div>
+        </div>
+        <div class="skill">
+          <h4>CSS</h4>
+          <div class="skill-bar" data-skill="85%"></div>
+        </div>
+        <div class="skill">
+          <h4>JavaScript</h4>
+          <div class="skill-bar" data-skill="75%"></div>
+        </div>
+        <div class="skill">
+          <h4>React</h4>
+          <div class="skill-bar" data-skill="70%"></div>
+        </div>
+        <div class="skill">
+          <h4>Vue</h4>
+          <div class="skill-bar" data-skill="65%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section gallery"></section>
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services section">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Modern and responsive design for web applications.</p>
+        </div>
+        <div class="card">
+          <h3>Frontend Development</h3>
+          <p>Clean, maintainable, interactive front-end coding.</p>
+        </div>
+        <div class="card">
+          <h3>UI/UX Consulting</h3>
+          <p>Enhancing usability and user satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section review"></section>
+  <!-- GALLERY / PROJECTS SECTION -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project">
+          <div class="project-overlay">
+            <h3>Project One</h3>
+            <p>Web application with modern UI.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project">
+          <div class="project-overlay">
+            <h3>Project Two</h3>
+            <p>Interactive frontend experience.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/300" alt="Project">
+          <div class="project-overlay">
+            <h3>Project Three</h3>
+            <p>Full-stack application demo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section blog"></section>
+  <!-- REVIEWS SECTION -->
+  <section id="reviews" class="reviews section">
+    <div class="container">
+      <h2>Reviews</h2>
+      <div class="review-slider">
+        <div class="review-item active">
+          <p>"Bee's work is phenomenal and fast. Highly recommended!"</p>
+          <h4>- Client A</h4>
+        </div>
+        <div class="review-item">
+          <p>"Interactive designs and smooth development!"</p>
+          <h4>- Client B</h4>
+        </div>
+        <div class="review-item">
+          <p>"Professional, creative, and responsive."</p>
+          <h4>- Client C</h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section contact"></section>
+  <!-- BLOG SECTION -->
+  <section id="blog" class="blog section">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300" alt="Blog">
+          <h3>Post One</h3>
+          <p>Brief snippet about the blog post...</p>
+        </div>
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300" alt="Blog">
+          <h3>Post Two</h3>
+          <p>Brief snippet about the blog post...</p>
+        </div>
+        <div class="blog-card">
+          <img src="https://via.placeholder.com/300" alt="Blog">
+          <h3>Post Three</h3>
+          <p>Brief snippet about the blog post...</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer class="section contact"></footer>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div id="map">
+        <!-- Embed map optional -->
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Bee. All rights reserved.</p>
+  </footer>
 
-    
-
-    <script src="js/main.js"></script>
+  <script src="/Task-1-Personal-Portfolio-Website/js/main.js"></script>
 </body>
 </html>
