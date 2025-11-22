@@ -26,64 +26,60 @@ const allProjects = [
   },
   {
     id: 3,
-    title: "Data Visualization Dashboard",
-    description:
-      "Designed and prototyped an interactive data dashboard concept, focusing on clear information architecture and responsive charting components.",
-    image:
-      "https://images.unsplash.com/photo-1549692520-cb9604130638?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["UX/UI", "Prototyping", "Information Architecture", "Vue"],
-    liveUrl: "https://your-dashboard-project-url.com",
-    category: "vue",
+    title: "Calculator",
+    description: "Interactive calculator app with memory",
+    image: "/Task-1-Personal-Portfolio-Website/assets/images/0.calc.png",
+    tags: ["UX/UI", "Prototyping", "Information Architecture", "JS"],
+    liveUrl: "https://calculator-delta-six-74.vercel.app/",
+    category: "html-css-js",
     featured: true,
   },
   {
     id: 4,
-    title: "NextGen Blog Platform",
-    description:
-      "Server-side rendered blog platform utilizing Next.js for improved performance and SEO, with dynamic routing and data fetching.",
+    title: "Food landing page",
+    description: "A clean simple HTML & CSS landing page",
     image:
-      "https://images.unsplash.com/photo-1499912093739-166e4a2e58c7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Next.js", "React", "Serverless", "Tailwind"],
-    liveUrl: "https://your-nextjs-blog.com",
-    category: "nextjs",
-    featured: true, // Showing four projects on index
-  },
-  {
-    id: 5,
-    title: "Vanilla CSS & HTML Site",
-    description:
-      "A clean, modern static brochure website built using only semantic HTML5 and custom CSS for a lightweight, performant result.",
-    image:
-      "https://images.unsplash.com/photo-1542831371-29b1f74f7133?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["HTML5", "CSS3", "Responsive", "Accessibility"],
-    liveUrl: "https://your-html-css-site.com",
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (361).png",
+    tags: ["Css", "Html", "Serverless", "UI"],
+    liveUrl: "https://food-page-rho.vercel.app/",
     category: "html-css",
     featured: false,
   },
-  //   {
-  //     id: 6,
-  //     title: "Python Data Scraper",
-  //     description:
-  //       "A Python script using BeautifulSoup to scrape data from a specific public source and format it into a clean CSV file.",
-  //     image:
-  //       "https://images.unsplash.com/photo-1621360061556-91e0d29d3807?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //     tags: ["Python", "BeautifulSoup", "Data Analysis", "Scripting"],
-  //     liveUrl: "https://github.com/eduaina/python-scraper",
-  //     category: "python",
-  //     featured: false,
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "React State Management Demo",
-  //     description:
-  //       "A complex form application demonstrating global state management using Zustand for high performance and clean separation of concerns.",
-  //     image:
-  //       "https://images.unsplash.com/photo-1596554523315-467f53f3162b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  //     tags: ["React", "Zustand", "State Management", "ES6+"],
-  //     liveUrl: "https://your-zustand-demo.com",
-  //     category: "react-zustand",
-  //     featured: false,
-  //   },
+  {
+    id: 5,
+    title: "Vanilla CSS & HTML landing Page",
+    description:
+      "A clean, modern static brochure website built using only semantic HTML5 and custom CSS for a lightweight, performant result.",
+    image:
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (362).png",
+    tags: ["HTML5", "CSS3", "Responsive", "Accessibility"],
+    liveUrl: "https://pixel-gang-month1-assessment.vercel.app/",
+    category: "html-css",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Palindrome checker",
+    description: "A simple palindrome checker.",
+    image:
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (363).png",
+    tags: ["UX/UI", "Prototyping", "Information Architecture", "JS"],
+    liveUrl: "https://building-a-palindrome-checker.vercel.app/",
+    category: "html-css-js",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Animated Login Page",
+    description:
+      "A non interactive but dynamic and beaautifully designed login page",
+    image:
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (364).png",
+    tags: ["UX/UI", "Prototyping", "Information Architecture"],
+    liveUrl: "https://forms-login-page.vercel.app/",
+    category: "html-css",
+    featured: false,
+  },
   //   {
   //     id: 8,
   //     title: "Angular Component Library",
