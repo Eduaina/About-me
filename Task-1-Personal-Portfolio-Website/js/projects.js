@@ -6,21 +6,21 @@ const allProjects = [
     description:
       "Developed a responsive e-commerce front-end, integrating product display and a seamless user checkout flow using React and CSS Grid.",
     image:
-      "https://images.unsplash.com/photo-1520038410233-7141be749572?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (358).png",
     tags: ["React", "CSS Grid", "UX", "Responsive"],
-    liveUrl: "https://your-blooms-project-url.com",
-    category: "react-bootstrap",
-    featured: true, // Show on index.html
+    liveUrl: "https://bloom-ochre.vercel.app/",
+    category: "html-css-js",
+    featured: true,
   },
   {
     id: 2,
-    title: "Interactive Task Manager",
+    title: "Smart Task Manager",
     description:
-      "Built an intuitive task management application with a focus on drag-and-drop functionality and local storage persistence, leveraging vanilla JavaScript.",
+      "Built an intuitive task management application with a focus on drag-and-drop functionality and local storage persistence, leveraging vanilla JavaScript and incorporates AI.",
     image:
-      "https://images.unsplash.com/photo-1528659850125-10336214ed7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/Task-1-Personal-Portfolio-Website/assets/images/Screenshot (359).png",
     tags: ["JavaScript", "HTML", "CSS", "Local Storage"],
-    liveUrl: "https://your-task-manager-project-url.com",
+    liveUrl: "https://task-app-neon-nine.vercel.app/",
     category: "html-css-js",
     featured: true,
   },
@@ -60,42 +60,42 @@ const allProjects = [
     category: "html-css",
     featured: false,
   },
-  {
-    id: 6,
-    title: "Python Data Scraper",
-    description:
-      "A Python script using BeautifulSoup to scrape data from a specific public source and format it into a clean CSV file.",
-    image:
-      "https://images.unsplash.com/photo-1621360061556-91e0d29d3807?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Python", "BeautifulSoup", "Data Analysis", "Scripting"],
-    liveUrl: "https://github.com/eduaina/python-scraper",
-    category: "python",
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "React State Management Demo",
-    description:
-      "A complex form application demonstrating global state management using Zustand for high performance and clean separation of concerns.",
-    image:
-      "https://images.unsplash.com/photo-1596554523315-467f53f3162b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["React", "Zustand", "State Management", "ES6+"],
-    liveUrl: "https://your-zustand-demo.com",
-    category: "react-zustand",
-    featured: false,
-  },
-  {
-    id: 8,
-    title: "Angular Component Library",
-    description:
-      "A reusable set of Angular UI components built using TypeScript and best practices, focusing on modularity and performance.",
-    image:
-      "https://images.unsplash.com/photo-1593720216127-0240d86b72a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Angular", "TypeScript", "RxJS", "SCSS"],
-    liveUrl: "https://your-angular-library.com",
-    category: "angular",
-    featured: false,
-  },
+  //   {
+  //     id: 6,
+  //     title: "Python Data Scraper",
+  //     description:
+  //       "A Python script using BeautifulSoup to scrape data from a specific public source and format it into a clean CSV file.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1621360061556-91e0d29d3807?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //     tags: ["Python", "BeautifulSoup", "Data Analysis", "Scripting"],
+  //     liveUrl: "https://github.com/eduaina/python-scraper",
+  //     category: "python",
+  //     featured: false,
+  //   },
+  //   {
+  //     id: 7,
+  //     title: "React State Management Demo",
+  //     description:
+  //       "A complex form application demonstrating global state management using Zustand for high performance and clean separation of concerns.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1596554523315-467f53f3162b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //     tags: ["React", "Zustand", "State Management", "ES6+"],
+  //     liveUrl: "https://your-zustand-demo.com",
+  //     category: "react-zustand",
+  //     featured: false,
+  //   },
+  //   {
+  //     id: 8,
+  //     title: "Angular Component Library",
+  //     description:
+  //       "A reusable set of Angular UI components built using TypeScript and best practices, focusing on modularity and performance.",
+  //     image:
+  //       "https://images.unsplash.com/photo-1593720216127-0240d86b72a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //     tags: ["Angular", "TypeScript", "RxJS", "SCSS"],
+  //     liveUrl: "https://your-angular-library.com",
+  //     category: "angular",
+  //     featured: false,
+  //   },
 ];
 
 // --- PROJECT CARD TEMPLATE FUNCTION ---
