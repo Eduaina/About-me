@@ -385,14 +385,32 @@ body.dark-theme .hero {
   margin-bottom: 2.5rem;
   color: rgba(255, 255, 255, 0.9);
 }
-.hero-role strong {
-  font-weight: 700;
-}
 
 .hero-cta {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+}
+
+.hero-role strong {
+    font-weight: 700;
+    color: var(--accent-light); 
+}
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    margin-left: 0.1rem;
+    width: 2px;
+    height: 1.3em; 
+    vertical-align: middle;
+    animation: blinkCursor 0.8s infinite;
+    transition: background-color var(--transition-speed);
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* --- About Section --- */

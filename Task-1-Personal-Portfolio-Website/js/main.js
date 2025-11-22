@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Smooth Scrolling for Navigation Links ---
+  //clean Scroll for Nav
   document
     .querySelectorAll('a[href^="#"], a[href^="index.html#"]')
     .forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
-        // Only prevent default if it's an internal hash link on the current page
         if (
           this.pathname === window.location.pathname ||
           this.pathname === "/index.html" ||
@@ -13,13 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
         ) {
           e.preventDefault();
 
-          // If on full projects page, navigate to index first, then scroll.
           if (this.getAttribute("href").startsWith("index.html#")) {
             window.location.href = this.getAttribute("href");
-            return;
+            return; // Stop further execution here, as page reload will handle scroll
           }
 
-          const targetId = this.getAttribute("href").replace("index.html", ""); // Clean hash if index.html is prepended
+          const targetId = this.getAttribute("href").replace("index.html", "");
           const targetElement = document.querySelector(targetId);
 
           if (targetElement) {
@@ -48,27 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
 
-  navToggle.addEventListener("click", () => {
-    navToggle.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    document.body.classList.toggle("nav-open");
-  });
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navToggle.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      document.body.classList.toggle("nav-open");
+    });
+  }
 
-  // --- Highlight Active Nav Link on Scroll ---
+  //Highlight Active Nav Link on Scroll
   const sections = document.querySelectorAll("main section");
   const navLinks = document.querySelectorAll(".nav-menu a");
 
   const highlightNavLink = () => {
-    if (window.location.pathname.includes("projects-full.html")) return; // Skip on full projects page
+    if (
+      window.location.pathname.includes("projects-full.html") ||
+      !sections.length
+    ) {
+      return;
+    }
 
     let current = "";
+    const headerHeight = document.querySelector(".header")?.offsetHeight || 0;
+
     sections.forEach((section) => {
-      const sectionTop =
-        section.offsetTop - document.querySelector(".header").offsetHeight - 20; // Added extra buffer
+      const sectionTop = section.offsetTop - headerHeight - 20;
       const sectionHeight = section.clientHeight;
       if (
-        pageYOffset >= sectionTop &&
-        pageYOffset < sectionTop + sectionHeight
+        window.pageYOffset >= sectionTop &&
+        window.pageYOffset < sectionTop + sectionHeight
       ) {
         current = section.getAttribute("id");
       }
@@ -76,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.forEach((link) => {
       link.classList.remove("active");
-      // Check link href against current section ID
       if (
         link.getAttribute("href").includes(current) &&
         link.getAttribute("href").includes("#")
@@ -87,23 +92,70 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.addEventListener("scroll", highlightNavLink);
-  highlightNavLink();
+  if (!window.location.pathname.includes("projects-full.html")) {
+    highlightNavLink();
+  }
 
-  // --- Intersection Observer for Scroll Animations (Fade-in/Slide-up) ---
-  const applyScrollAnimations = (elements) => {
-    if (!elements) return;
+  //Dynamic Role Typewriter Effect
+  const dynamicRoleElement = document.getElementById("dynamic-role");
+  if (dynamicRoleElement) {
+    const roles = [
+      "Front-End Developer",
+      "UI/UX Designer",
+      "UX Researcher",
+      "Technical Writer",
+      "Promising Future Fullstack Developer",
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 60; 
+    const deletingSpeed = 80; 
+    const delayBetweenRoles = 1900; 
+
+    function typeWriter() {
+      const currentRole = roles[roleIndex];
+      let displayText = currentRole.substring(0, charIndex);
+
+      dynamicRoleElement.textContent = displayText; // Update the element
+
+      if (!isDeleting && charIndex < currentRole.length) {
+        // Typing
+        charIndex++;
+        setTimeout(typeWriter, typingSpeed);
+      } else if (isDeleting && charIndex > 0) {
+        // Deleting
+        charIndex--;
+        setTimeout(typeWriter, deletingSpeed);
+      } else if (!isDeleting && charIndex === currentRole.length) {
+        // Paused at end of typing, start deleting after a delay
+        isDeleting = true;
+        setTimeout(typeWriter, delayBetweenRoles);
+      } else if (isDeleting && charIndex === 0) {
+        // Finished deleting, move to next role
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeWriter, typingSpeed); 
+      }
+    }
+    typeWriter(); 
+  }
+
+  // --- Intersection Observer for Scroll Animations (Fade-in/Slide-up)
+  window.applyScrollAnimations = (elements) => {
+    if (!elements || elements.length === 0) return;
 
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1,
+      threshold: 0.1, 
     };
 
     const observerCallback = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); 
         }
       });
     };
@@ -114,7 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     elements.forEach((element) => {
-      // Exclude hero content if it has animate-fade-in, as it's visible by default
       if (
         !element.closest("#hero") ||
         !element.classList.contains("animate-fade-in")
@@ -124,45 +175,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  applyScrollAnimations(
+
+  window.applyScrollAnimations(
     document.querySelectorAll(".animate-slide-up, .animate-fade-in")
   );
 
-  // Ensure hero content starts visible
   const heroContent = document.querySelector("#hero .animate-fade-in");
   if (heroContent) {
     heroContent.classList.add("is-visible");
   }
 
-  // --- Dark/Light Theme Toggle ---
+  //toggle
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
 
-  // 1. Check LocalStorage for saved preference (defaults to light if none saved)
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    body.classList.replace("light-theme", savedTheme);
-  }
-
-  // Set icon based on current theme
-  const updateThemeIcon = () => {
-    if (body.classList.contains("dark-theme")) {
-      themeToggle.querySelector("i").classList.replace("fa-moon", "fa-sun");
-    } else {
-      themeToggle.querySelector("i").classList.replace("fa-sun", "fa-moon");
-    }
-  };
-  updateThemeIcon();
-
-  // 2. Add event listener for toggle
-  themeToggle.addEventListener("click", () => {
-    if (body.classList.contains("light-theme")) {
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      body.classList.replace("light-theme", savedTheme);
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       body.classList.replace("light-theme", "dark-theme");
-      localStorage.setItem("theme", "dark-theme");
-    } else {
-      body.classList.replace("dark-theme", "light-theme");
-      localStorage.setItem("theme", "light-theme");
+      localStorage.setItem("theme", "dark-theme"); 
     }
-    updateThemeIcon();
-  });
+
+    // Setting icon for current theme
+    const updateThemeIcon = () => {
+      if (body.classList.contains("dark-theme")) {
+        themeToggle.querySelector("i").classList.replace("fa-moon", "fa-sun");
+      } else {
+        themeToggle.querySelector("i").classList.replace("fa-sun", "fa-moon");
+      }
+    };
+    updateThemeIcon(); 
+
+  
+    themeToggle.addEventListener("click", () => {
+      if (body.classList.contains("light-theme")) {
+        body.classList.replace("light-theme", "dark-theme");
+        localStorage.setItem("theme", "dark-theme");
+      } else {
+        body.classList.replace("dark-theme", "light-theme");
+        localStorage.setItem("theme", "light-theme");
+      }
+      updateThemeIcon();
+    });
+  }
 });
