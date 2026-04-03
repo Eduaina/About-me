@@ -1,8 +1,8 @@
 /* --- CSS Variables & Global Styles --- */
 :root {
   /* Light Theme Colors */
-  --primary-color: #5a0070;
-  --primary-dark: #3a004a;
+  --primary-color: #002570;
+  --primary-dark: #124a00b7;
   --accent-color: #00b0b0;
   --accent-light: #66cccc;
   --text-dark: #202020;
@@ -23,10 +23,10 @@
 
 /* Dark Them */
 body.dark-theme {
-  --primary-color: #9c27b0; 
-  --primary-dark: #bb86fc; 
-  --accent-color: #b300ff; 
-  --accent-light: #80deea;
+  --primary-color: #2762b0; 
+  --primary-dark: #86c9fca8; 
+  --accent-color: #5d00ff; 
+  --accent-light: #80eac9;
   --text-dark: #e0e0e0;
   --text-light: #b0b0b0;
   --bg-main: #121212; 
