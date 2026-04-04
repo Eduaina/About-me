@@ -17,7 +17,7 @@ const allProjects = [
       "FashionLink is a role based web application that streamlines fashion business operations by replacing manual workflows with a centralized digital system. It enables designers to manage clients, measurements and order history, collaborate with artisans through structured task assignments, and give clients real time visibility into their orders, all in one unified platform.",
     image: "assets/images/FashionLink.png",
     tags: ["RxJS", "SCSS","UX/UI", "Prototyping", "Information Architecture", "JS", "Dual Entry"],
-    liveUrl: "https://fashion-link-site.vercel.app/artisan/orders",
+    liveUrl: "https://fashion-link-site.vercel.app/",
     category: "react",
     featured: false,
   },
