@@ -10,6 +10,7 @@
   --bg-main: #fcfcfc;
   --bg-section: #f0f0f0; 
   --bg-white: #ffffff;
+  --bg-whit: #ffffff;
   --border-color: #e0e0e0;
   --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.05);
   --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -32,6 +33,7 @@ body.dark-theme {
   --bg-main: #121212; 
   --bg-section: #1e1e1e; 
   --bg-white: #2c2c2c; 
+  --bg-whit: #a5a3a3;;
   --border-color: #383838;
   --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.2);
   --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -549,7 +551,7 @@ body.dark-theme .hero {
 }
 .skill-category li:hover {
   background-color: var(--accent-color);
-  color: var(--bg-white);
+  color: var(--bg-whit);
 }
 
 .learning-tag {
@@ -694,11 +696,12 @@ body.dark-theme .hero {
 
 /* color for transparent buttons/hovers */
 body:not(.dark-theme) {
-  --primary-dark-rgb: 58, 0, 74;
+  --primary-dark-rgb: 8, 50, 74;
 }
 
 body.dark-theme {
-  --primary-dark-rgb: 187, 134, 252;
+  --primary-dark-rgb: 5, 40, 74;
+  /* --primary-dark-rgb: 187, 134, 252; */
 }
 
 .btn-live-preview {
