@@ -12,6 +12,39 @@ const allProjects = [
     featured: false,
   },
   {
+    id: 13,
+    title: "Enrollment App",
+    description:
+      "A responsive React application for managing student enrollment with API integration, controlled forms, and dynamic state management.",
+    image: "assets/images/Enrollment App.png",
+    tags: ["RxJS", "SCSS","UX/UI", "Information Architecture", "API"],
+    liveUrl: "https://enrollment-app-orpin.vercel.app/",
+    category: "react",
+    featured: false,
+  },
+  {
+    id: 14,
+    title: "Profile App",
+    description:
+      "Built a responsive React dashboard that displays student profiles with reusable components and dynamic score tracking.",
+    image: "assets/images/Profile-Builder.png",
+    tags: ["AI", "RxJS", "SCSS","UX/UI", "Information Architecture", "JS", "API"],
+    liveUrl: "https://profile-app-blue-xi.vercel.app/",
+    category: "react",
+    featured: false,
+  },
+  {
+    id: 15,
+    title: "Url Shortening App",
+    description:
+      "A pixel-accurate, responsive, and cleanly structured implementation using HTML5, Bootstrap (layout + responsiveness), Vanilla JavaScript (API integration & interactions), URL shortening functionality (using API), Input validation",
+    image: "assets/images/URL-shortener.png",
+    tags: ["Bootstrap", "JavaScript", "HTML", "UX/UI", "API"],
+    liveUrl: "https://url-shortening-api-master-alpha.vercel.app/",
+    category: "react",
+    featured: false,
+  },
+  {
     id: 2,
     title: "Recommendation Generator",
     description: "A lightweight AI powered book recommender that integrates with Gemini to generate personalized reading suggestions based on user input. It processes prompts in real time and returns context aware recommendations with brief insights.",
