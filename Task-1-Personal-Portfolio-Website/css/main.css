@@ -758,6 +758,10 @@ body.dark-theme {
     color var(--transition-speed);
 }
 
+#projects-full {
+  margin-top: -150px;
+}
+
 /* --- Project Category Buttons (New) --- */
 .project-categories {
   text-align: center;
