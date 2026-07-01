@@ -1,23 +1,23 @@
 // --- PROJECT DATA ARRAY (Easily Scalable) ---
 const allProjects = [
-  {
+    {
     id: 1,
-    title: "Recommendation Generator",
-    description: "A lightweight AI powered book recommender that integrates with Gemini to generate personalized reading suggestions based on user input. It processes prompts in real time and returns context aware recommendations with brief insights.",
-    image:"assets/images/gen.png",
-    tags: ["AI", "RxJS", "SCSS", "UX/UI", "Prototyping", "Information Architecture"],
-    liveUrl: "https://react-hooks-psi-one.vercel.app/",
+    title: "FashionLink(Live)",
+    description:
+      "FashionLink is a role based web application that streamlines fashion business operations by replacing manual workflows with a centralized digital system. It enables designers to manage clients, measurements and order history, collaborate with artisans through structured task assignments, and give clients real time visibility into their orders, all in one unified platform.",
+    image: "assets/images/fl live.png",
+    tags: ["AI", "RxJS", "SCSS","UX/UI", "Information Architecture", "JS", "Dual Entry", "API"],
+    liveUrl: "https://fashionlink.vercel.app/",
     category: "react",
     featured: false,
   },
   {
     id: 2,
-    title: "Fashion link App(Static)",
-    description:
-      "FashionLink is a role based web application that streamlines fashion business operations by replacing manual workflows with a centralized digital system. It enables designers to manage clients, measurements and order history, collaborate with artisans through structured task assignments, and give clients real time visibility into their orders, all in one unified platform.",
-    image: "assets/images/FashionLink.png",
-    tags: ["RxJS", "SCSS","UX/UI", "Prototyping", "Information Architecture", "JS", "Dual Entry"],
-    liveUrl: "https://fashion-link-site.vercel.app/",
+    title: "Recommendation Generator",
+    description: "A lightweight AI powered book recommender that integrates with Gemini to generate personalized reading suggestions based on user input. It processes prompts in real time and returns context aware recommendations with brief insights.",
+    image:"assets/images/gen.png",
+    tags: ["AI", "RxJS", "SCSS", "UX/UI", "Prototyping", "Information Architecture"],
+    liveUrl: "https://react-hooks-psi-one.vercel.app/",
     category: "react",
     featured: false,
   },
@@ -54,6 +54,17 @@ const allProjects = [
   },
   {
     id: 6,
+    title: "Fashion link App(Static)",
+    description:
+      "FashionLink is a role based web application that streamlines fashion business operations by replacing manual workflows with a centralized digital system. It enables designers to manage clients, measurements and order history, collaborate with artisans through structured task assignments, and give clients real time visibility into their orders, all in one unified platform.",
+    image: "assets/images/FashionLink.png",
+    tags: ["RxJS", "SCSS","UX/UI", "Prototyping", "Information Architecture", "JS", "Dual Entry"],
+    liveUrl: "https://fashion-link-site.vercel.app/",
+    category: "react",
+    featured: false,
+  },
+  {
+    id: 7,
     title: "Blooms E-commerce Platform",
     description:
       "Developed a responsive e-commerce front-end, integrating product display and a seamless user checkout flow using React and CSS Grid.",
@@ -64,7 +75,7 @@ const allProjects = [
     featured: true,
   },
   {
-    id: 7,
+    id: 8,
     title: "Movie App",
     description: "A clean simple Vue & CSS movie page",
     image:"assets/images/movie.png",
@@ -74,24 +85,13 @@ const allProjects = [
     featured: false,
   },
   {
-    id: 8,
+    id: 9,
     title: "Animated Login Page",
     description: "A non interactive but dynamic and beaautifully designed login page",
     image: "assets/images/Screenshot (364).png",
     tags: ["UX/UI", "Prototyping", "Information Architecture"],
     liveUrl: "https://forms-login-page.vercel.app/",
     category: "html-css",
-    featured: false,
-  },
-  {
-    id: 9,
-    title: "FashionLink(Live)",
-    description:
-      "FashionLink is a role based web application that streamlines fashion business operations by replacing manual workflows with a centralized digital system. It enables designers to manage clients, measurements and order history, collaborate with artisans through structured task assignments, and give clients real time visibility into their orders, all in one unified platform.",
-    image: "assets/images/fl live.png",
-    tags: ["AI", "RxJS", "SCSS","UX/UI", "Prototyping", "Information Architecture", "JS", "Dual Entry", "API"],
-    liveUrl: "https://fashionlin.vercel.app/",
-    category: "react",
     featured: false,
   },
   {
